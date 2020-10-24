@@ -32,8 +32,10 @@
 </div>
 </template>
 
-<script scoped>
+<script>
 export default {
+    name: 'Calculator',
+    components: {},
     data() {
         return {
             current: '',
@@ -61,9 +63,6 @@ export default {
         }
     },
 
-    mounted() {
-        console.log('Component mounted.')
-    }
 }
 </script>
 

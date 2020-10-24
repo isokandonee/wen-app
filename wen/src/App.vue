@@ -1,14 +1,6 @@
 <template>
 <v-app>
-    <v-app-bar app color="deep-purple" dark>
-        <div class="d-flex align-center">
-            <span>Wen</span>
-            <span>App</span>
-        </div>
-        <v-spacer></v-spacer>
-        <span class="mr-2">Welcome</span>
-    </v-app-bar>
-
+    <Navbar />
     <v-main class="deep-purple lighten-5">
         <router-view></router-view>
     </v-main>
@@ -16,10 +8,13 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
 export default {
     name: 'App',
 
-    components: {},
+    components: {
+        Navbar
+    },
 
     data: () => ({
         //
