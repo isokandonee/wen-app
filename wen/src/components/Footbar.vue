@@ -1,18 +1,18 @@
 <template>
 <v-bottom-navigation :value="value" color="deep-purple" grow>
-    <v-btn>
-        <span>Recents</span>
+    <v-btn to="/calculator">
+        <span>Calculator</span>
 
-        <v-icon>mdi-history</v-icon>
+        <v-icon>mdi-calculator</v-icon>
     </v-btn>
 
-    <v-btn>
-        <span>Home</span>
+    <v-btn to="/">
+        <span>Dashboard</span>
 
         <v-icon>mdi-home</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn to="/about">
         <span>Nearby</span>
 
         <v-icon>mdi-map-marker</v-icon>
