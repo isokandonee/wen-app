@@ -1,5 +1,5 @@
 <template>
-<v-bottom-navigation class="hidden-lg-and-up" :value="value" color="deep-purple" grow>
+<v-bottom-navigation :value="value" color="deep-purple" grow app>
     <v-btn to="/calculator">
         <span>Calculator</span>
 
@@ -7,15 +7,15 @@
     </v-btn>
 
     <v-btn to="/">
-        <span>Dashboard</span>
+        <span>Home</span>
 
         <v-icon>mdi-home</v-icon>
     </v-btn>
 
-    <v-btn to="/about">
-        <span>Nearby</span>
+    <v-btn to="/blog">
+        <span>Blog</span>
 
-        <v-icon>mdi-map-marker</v-icon>
+        <v-icon>mdi-newspaper</v-icon>
     </v-btn>
 </v-bottom-navigation>
 </template>

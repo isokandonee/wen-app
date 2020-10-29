@@ -1,6 +1,6 @@
 <template>
 <nav>
-    <v-app-bar flat app color="deep-purple" dark grow>
+    <v-app-bar flat app class="deep-purple" dark>
         <div id="sideicon">
             <span class="font-weight-light">Wen</span>
             <span class="font-weight-bold">App</span>
@@ -24,7 +24,7 @@
 
         <v-divider></v-divider>
 
-        <v-list dense>
+        <v-list>
             <v-list-item router :to="item.route" v-for="item in items" :key="item.title" link>
                 <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
@@ -52,9 +52,9 @@ export default {
                 route: '/'
             },
             {
-                title: 'About',
-                icon: 'mdi-forum',
-                route: '/about'
+                title: 'Blog',
+                icon: 'mdi-newspaper',
+                route: '/blog'
             },
             {
                 title: 'Calculator',
