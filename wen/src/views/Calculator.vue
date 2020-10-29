@@ -1,6 +1,6 @@
 <template>
-<div class="row justify-content-center">
-    <div class="col-md-8">
+<div class="row justify-content-center" justify="center">
+    <div class=" col-md-8">
         <div class="card">
             <div class="card-header text-center fa-2x">Calculator</div>
         </div>
@@ -67,12 +67,17 @@ export default {
 </script>
 
 <style scoped>
+#app {
+    text-align: center;
+}
+
 .calculator {
     font-size: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: mimax(50px, auto);
     border: 1px solid #333;
+    cursor: pointer;
 }
 
 .display {

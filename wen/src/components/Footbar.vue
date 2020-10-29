@@ -1,5 +1,5 @@
 <template>
-<v-bottom-navigation :value="value" color="deep-purple" grow>
+<v-bottom-navigation class="hidden-lg-and-up" :value="value" color="deep-purple" grow>
     <v-btn to="/calculator">
         <span>Calculator</span>
 
