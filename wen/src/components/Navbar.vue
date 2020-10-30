@@ -34,6 +34,37 @@
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
+            <span v-if="isLoggedIn">
+                <v-list-item @click="logout">
+                    <v-list-item-icon>
+                        <v-icon>mdi-login</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <v-list-item-title>Logout</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </span>
+            <span v-else>
+                <v-list-item>
+                    <v-list-item-icon>
+                        <v-icon>mdi-account</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <v-list-item-title>Register</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-list-item>
+                    <v-list-item-icon>
+                        <v-icon>mdi-login</v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-content>
+                        <v-list-item-title>Login</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </span>
         </v-list>
     </v-navigation-drawer>
 </nav>
@@ -44,8 +75,18 @@ export default {
     name: 'Navbar',
 
     data: () => ({
+        computed: {
+            isLoggedIn: function () {
+                return this.$store.getters.isAuthenticated
+            }
+        },
+        methods: {
+            async logout() {
+                await this.$store.dispatch('LogOut')
+                this.$router.push('/login')
+            }
+        },
         drawer: false,
-        // drawer: null,
         items: [{
                 title: 'Home',
                 icon: 'mdi-view-dashboard',
@@ -60,11 +101,6 @@ export default {
                 title: 'Calculator',
                 icon: 'mdi-calculator',
                 route: '/calculator'
-            },
-            {
-                title: 'Logout',
-                icon: 'mdi-exit-to-app',
-                route: '/logout'
             }
         ],
     }),
