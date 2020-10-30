@@ -32,20 +32,23 @@
             </v-card>
         </v-col>
     </v-row>
-    <v-row class="" no-gutters>
+    <v-row class="mb-6" no-gutters>
         <v-col xs="6" offset-xs="3">
             <v-card class="pa-2" outlined tile>
-                <template>
-                    <v-title title>
-                        <v-label>Title</v-label>
-                        <div value="" label="Title">{{title}}</div>
-                    </v-title>
-                    <v-divider></v-divider>
-                    <v-text>
-                        <v-label>Content</v-label>
-                        <div value="" label="">{{content}}</div>
-                    </v-text>
-                </template>
+                <h5 title>Title</h5>
+            </v-card>
+            <v-card class="pa-2 mt-2" outlined tile>
+                <h4>{{ title }}</h4>
+            </v-card>
+        </v-col>
+    </v-row>
+    <v-row class="mb-6" no-gutters>
+        <v-col xs="6" offset-xs="3">
+            <v-card class="pa-2" outlined tile>
+                <h5 title>Content</h5>
+            </v-card>
+            <v-card class="pa-2 mt-2" outlined tile>
+                <p>{{ content }}</p>
             </v-card>
         </v-col>
     </v-row>
